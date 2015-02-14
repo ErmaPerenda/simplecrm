@@ -1,0 +1,41 @@
+<p id="titleClientsInfo" class="titleMain">Clients information</p>
+
+<%if clients.count==0 %>
+<p class="titleTableInfo">No one client</p>
+<%else %>
+<table style="margin: 15px;">
+<tr>
+	<th class="titleTableInfo">No.</th>
+	<th class="titleTableInfo">Name</th>
+	<th class="titleTableInfo">Surname</th>
+	<th class="titleTableInfo">Phone</th>
+	<th class="titleTableInfo">Email</th>
+	<th class="titleTableInfo">Company</th>
+	<th class="titleTableInfo">Job position</th>
+	<th class="titleTableInfo">Address</th>
+	<th class="titleTableInfo">City</th>
+	<th class="titleTableInfo">Country</th>
+</tr>
+<%i=1%>
+<%clients.each do |client| %>
+<tr>
+	<td class="bodyTableInfo"><%=i%>.</td>
+	<td class="bodyTableInfo"> <%=client.name%> </td>
+	<td class="bodyTableInfo"><%=client.surname%> </td>
+	<td class="bodyTableInfo"><%=client.phone%> </th>
+	<td class="bodyTableInfo"><%=client.email%> </td>
+	<td class="bodyTableInfo"><%=client.company%> </td>
+	<td class="bodyTableInfo"><%=client.job_position%> </td>
+	<td class="bodyTableInfo"><%=client.address%> </td>
+	<td class="bodyTableInfo"><%=client.city%> </td>
+	<td class="bodyTableInfo"><%=client.country%> </td>
+	<td class="bodyTableInfo"><%=link_to "See notes", client, remote:true%>
+	<td class="bodyTableInfo"><%=link_to "Edit", edit_client_path(client)%>
+	<td class="bodyTableInfo" ><%=link_to "Delete", client_path(client), method: :delete, 
+	'data-confirm' => "Are you sure to delete client  '#{client.name}' '#{client.surname}'?" %>
+</tr>
+<%i=i+1%>
+<%end%>
+
+</table>
+<%end%>

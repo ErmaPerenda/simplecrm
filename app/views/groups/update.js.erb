@@ -1,0 +1,18 @@
+
+var visibleButton={"display":"block",
+	"color": "rgb(44,105,157)",
+	"background-color": "rgb(255,255,255)",
+	"width": "60px",
+	"text-align": "center",
+	"font-size": "0.8em",
+	"margin-left":"10px",
+	"margin-top": "5px",
+	"font-weight": "bold"};
+
+$('#submit<%= @group.id %>').css('display','none');
+$('#<%= @group.id %>').css('display','none');
+$('#link<%= @group.id %>').show();
+$('#edit<%= @group.id %>').css(visibleButton);
+$('#delete<%= @group.id %>').css(visibleButton);
+$('#<%=@group.id %>').prop('disabled',true);
+$('#link<%= @group.id %>').html('<%=@group.name%>');

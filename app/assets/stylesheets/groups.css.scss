@@ -1,0 +1,304 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.divHeaderLog {
+	display: block; 
+	background-color: rgb(51,122,183); 
+	
+
+	border-top-color:rgb(102,102,102);
+	border-top-style: solid;
+	border-top-width: 5px;
+
+	border-left-color:rgb(102,102,102);
+	border-left-style: solid;
+	border-left-width: 5px;
+
+	border-right-color:rgb(255,255,255);
+	border-right-style: solid;
+	border-right-width: 5px;
+
+	border-bottom-color:rgb(255,255,255);
+	border-bottom-style: solid;
+	border-bottom-width: 10px;
+}
+
+.headerLog {
+	text-align: justify;
+	list-style: none;
+}
+
+.headerLog li{
+	display: inline-block;
+	margin-top: 5px;
+	vertical-align: middle;
+}
+
+.titlePage {
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-size: 2em;
+	font-weight: bold;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	text-align: left;
+	
+}
+
+.userName {
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	text-align: left;
+	font-size: 1.5 em;
+	border-right-color: rgb(255,255,255);
+	border-right-style: solid;
+	border-right-width: 2px;
+	padding-right: 5px;
+}
+
+.logout {
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	text-align: left;
+	font-size: 1.5 em;
+}
+
+.logout:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	text-align: left;
+	font-size: 1.5 em;
+	display: block;
+	background-color:rgb(44,105,157);
+	width: 55px;
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+.search {
+	width: 350px;
+	color: rgb(51,122,183);
+}
+
+.searchButton {
+	width: 100px;
+	color: rgb(255,255,255);
+	background-color: rgb(44,105,157);
+}
+
+.tree_menu {
+	display: block;
+	background-color:rgb(44,105,157);
+	float: left;
+	height: 800px;
+	padding-left: 10px;
+	padding-top: 10px;
+
+	border-top-color:rgb(44,105,157);
+	border-top-style: solid;
+	border-top-width: 5px;
+
+	border-left-color:rgb(255,255,255);
+	border-left-style: solid;
+	border-left-width: 10px;
+
+	border-bottom-color:rgb(255,255,255);
+	border-bottom-style: solid;
+	border-bottom-width: 5px;
+}
+
+.main_log {
+	display: block;
+	background-color: rgb(255,255,255);
+	float: left;
+	height: 800px;
+
+	border-top-color:rgb(44,105,157);
+	border-top-style: solid;
+	border-topwidth: 5px;
+
+	border-left-color:rgb(102,102,102);
+	border-left-style: solid;
+	border-left-width: 5px;
+
+	border-right-color:rgb(44,105,157);
+	border-right-style: solid;
+	border-right-width: 10px;
+
+	border-bottom-color:rgb(44,105,157);
+	border-bottom-style: solid;
+	border-bottom-width: 5px;
+
+}
+
+
+.listGroup {
+	color: rgb(255,255,255);
+	font-size: 1.1em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-top:5px;
+
+}
+
+.listGroup:hover {
+	color: rgb(255,0,0);
+	text-decoration:none;
+	font-size: 1.1em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.hideButton {
+	display:none;
+}
+
+.visibleButton {
+	display: block;
+	color: rgb(44,105,157);
+	background-color: rgb(255,255,255);
+	width: 60px;
+	text-align: center;
+	font-size: 0.8em;
+	margin-left:10px;
+	margin-top: 5px;
+	font-weight: bold;
+
+}
+
+
+.updateButton {
+	display:none;
+	color: rgb(255,0,0);
+	background-color: rgb(44,105,157);
+	width: 100px;
+	text-align: center;
+	font-size: 0.8em;
+	margin-left:10px;
+	margin-top: 5px;
+	font-weight: bold;
+	
+}
+
+.newButton {
+	text-decoration: none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(255,0,0);
+	text-align: center;
+	font-size: 1.2em;
+	width: 150px;
+	margin-top: 20px;
+	font-weight: bold;
+		
+}
+
+.newButton:hover {
+	text-decoration:none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(30,71,106);
+	text-align: center;
+	font-size: 1.2em;
+	width: 150px;
+	margin-top: 20px;
+	font-weight: bold;
+	border-style: solid;
+	border-color: rgb(255,255,255);
+	border-width:1px;			
+}
+
+
+
+.newGroupForm {
+	margin-top: 10px;
+	color: rgb(255,0,0);
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.titleList {
+	color: rgb(255,0,0);
+	text-align: left;
+	font-size: 1.8em;
+	font-weight: bolder;	
+
+}
+
+.linkNewClient {
+	color: rgb(255,255,255);
+	font-size: 0.8em;
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	
+}
+
+.linkNewClient:hover {
+	text-decoration:none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(30,71,106);
+	text-align: center;
+	font-size: 0.8em;
+	font-weight: bold;
+	border-style: solid;
+	border-color: rgb(255,255,255);
+	border-width:1px;
+
+}
+
+
+.listSubgroupParent,.listSubgroupParent:hover, .listSubgroupParent:visited, .listSubgroupParent:active{
+	text-decoration:none;
+	color: rgb(255,255,255);
+	font-size: 0.9em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-top:3px;
+	margin-left: 10px;
+	
+}
+.titleMain {
+	color: rgb(51,122,183);
+	font-size: 2em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	margin:15px;
+	text-align:center;
+}
+
+.titleTableInfo {
+	color: rgb(51,122,183);
+	font-size: 1em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	text-align:center;
+	border: 1px solid rgb(51,122,183);
+	margin:5px;
+	padding:5px;
+	}
+
+.bodyTableInfo {
+	color: rgb(0,0,0);
+	background-color: rgb(159,192,221);
+	font-size: 0.9em;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid rgb(255,255,255);
+}

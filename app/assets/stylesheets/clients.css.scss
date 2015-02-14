@@ -1,0 +1,171 @@
+// Place all the styles related to the clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.clientForm {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.headerClientForm {
+display:block;
+background-color: rgb(44,105,157);
+color: rgb(255,255,255);
+font-size: 1.5em;
+font-weight: bold;
+margin: 5px;	
+padding:5px;
+}
+
+.bodyClientForm {
+display: block;
+color: rgb(44,105,157);
+background-color: rgb(196,196,196);
+border-style: solid;
+border-color: rgb(255,255,255);
+border-width:1px;
+margin: 10px;
+padding:10px;
+font-size: 1em;
+font-weight:bold;	
+}
+
+.tableNewClient {
+	padding:5px;
+}
+
+.buttonClientInfo {
+	text-decoration: none;
+	display:block;
+	color: rgb(255,255,255);
+	background-color: rgb(255,0,0);
+	text-align: center;
+	font-size: 0.9em;
+	padding: 5px;
+	margin-top: 10px;
+	margin-left: 30px;
+	font-weight: bold;
+	display: inline;
+	width:150px;
+		
+}
+
+.buttonClientInfo:hover {
+	text-decoration:none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(30,71,106);
+	text-align: center;
+	font-size: 0.9em;
+	padding: 5px;
+	margin-top: 10px;
+	margin-left: 30px;
+	font-weight: bold;
+	border-style: solid;
+	border-color: rgb(255,255,255);
+	border-width:1px;	
+	display:inline;	
+	width:150px;	
+}
+.titleClientsNotes {
+	color: rgb(51,122,183);
+	font-size: 1.2em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	text-align:left;
+	margin:15px;
+	padding:10px;
+}
+
+.titleNotes {
+	color: rgb(51,122,183);
+	font-size: 1em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	text-align:center;
+	padding:10px;
+	border: 1px solid rgb(51,122,183);
+	background-color: rgb(183,183,183);
+}
+
+.bodyNotes {
+	color: rgb(0,0,0);
+	font-size: 0.8em;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align:justify;
+	padding:10px;
+	border: 1px solid rgb(183,183,183);
+	background-color: rgb(159,192,221);
+}
+.deleteNotes {
+	color: rgb(255,0,0);
+	font-size: 0.8em;
+}
+
+.deleteNotes:hover {
+	color: rgb(0,0,255);
+	font-size: 0.8em;
+}
+.newButtonNotes{
+	text-decoration: none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(255,0,0);
+	text-align: center;
+	font-size: 1.1em;
+	width: 120px;
+	margin-top: 20px;
+	margin-left:50px;
+	font-weight: bold;
+}
+.newButtonNotes:hover{
+	text-decoration:none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(30,71,106);
+	text-align: center;
+	font-size: 1.1em;
+	width: 120px;
+	margin-top: 20px;
+	margin-left:50px;
+	font-weight: bold;
+	border-style: solid;
+	border-color: rgb(255,255,255);
+	border-width:1px;			
+}
+
+.newNoteForm {
+	margin-top: 10px;
+	margin-left:40px;
+	color: rgb(255,0,0);
+	font-size: 1em;
+	font-weight: bold;
+}
+.newButtonNote {
+	text-decoration: none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(255,0,0);
+	text-align: center;
+	font-size: 1em;
+	width: 100px;
+	margin-top: 20px;
+	margin-left:50px;
+	font-weight: bold;
+		
+}
+
+.newButtonNote:hover {
+	text-decoration:none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(30,71,106);
+	text-align: center;
+	font-size: 1em;
+	width: 100px;
+	margin-top: 20px;
+	font-weight: bold;
+	border-style: solid;
+	border-color: rgb(255,255,255);
+	border-width:1px;	
+	margin-left:50px;		
+}

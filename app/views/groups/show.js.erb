@@ -1,0 +1,2 @@
+$("#main_log").html("<%= escape_javascript(render 'clients', :clients=>@clients)%>");
+$("#titleClientsInfo").after("<p class='titleTableInfo'> Clients in group <%=@group.name%></p>");

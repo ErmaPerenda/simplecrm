@@ -1,0 +1,83 @@
+
+
+<div id="headerLog" class="divHeaderLog">
+  <ul id="ulHeaderLog" class='headerLog'>
+    <li>
+<p class='titlePage'>Simple CRM<p> 
+</li>
+
+<li>
+  <p>
+  <%= form_tag user_groups_path(current_user), method: :get, role: 'search' do %>
+        <%= search_field_tag :q, params[:q], placeholder: "Search by name or surname or company", class: 'search' %>
+        <%= submit_tag "Search", class: 'searchButton' %>
+      <% end %>
+    </p>
+</li>
+
+<li>
+  <p class="userName">
+<%=current_user.username%>
+</p>
+</li>
+<li>
+  <p>
+  <%= link_to "Log out", user_session_path, method: :delete, class: 'logout'%>
+</p>
+ </li>
+
+ </ul>
+</div>
+
+
+
+<div id="tree_menu" class="tree_menu">
+<p class="titleList">List of client groups</p>
+<!--show all groups -->
+
+<table id="show_list">
+  
+  <% @groups.each do |group| %>
+   <%=render group %>
+  
+  <% end %>
+  </table>
+
+<!--form for create a new group -->
+  <table  id="new_group_table">
+    <tr>
+      <td>
+        <%= link_to "New group", "#", onclick: "show_form_group('group');", class: 'newButton' %>
+        <!--Add new group -->
+        <div id="form_new_group" style='display:none'>
+
+           <%=form_for [current_user, @group],  remote: true do |f|%>
+
+           <div >
+             <%= f.label :name, class: "newGroupForm" %>
+             <%= f.text_field :name, id: "new_group_value", class: "newGroupForm" %>
+            </div>
+
+           <div>
+             <%= f.submit  class: 'newButton' %>
+            </div>
+
+          <% end %>
+
+          </div>
+      </td>
+    </tr>
+  </table>
+
+
+</div>
+
+
+<div id="main_log" class="main_log">
+  <%=render 'clients', :clients=>@clients%>
+</div>
+
+
+
+
+

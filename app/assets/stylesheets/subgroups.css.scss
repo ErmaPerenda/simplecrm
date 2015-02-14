@@ -1,0 +1,152 @@
+.listSubgroup {
+	color: rgb(255,255,255);
+	font-size: 0.9em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-top:3px;
+	margin-left: 30px;
+
+}
+
+.listSubgroup:hover {
+	color: rgb(255,0,0);
+	text-decoration:none;
+	font-size: 0.9em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-left: 30px;
+}
+
+.listSubgroup1 {
+	color: rgb(255,255,255);
+	font-size: 0.9em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-top:3px;
+	
+
+}
+
+.listSubgroup1:hover {
+	color: rgb(255,0,0);
+	text-decoration:none;
+	font-size: 0.9em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-top:3px;
+}
+
+
+.visibleButtonSubgroup {
+	display: block;
+	color: rgb(44,105,157);
+	background-color: rgb(255,255,255);
+	width: 40px;
+	text-align: center;
+	font-size: 0.6em;
+	margin-left:20px;
+	margin-top: 3px;
+	font-weight: bold;
+
+}
+
+
+.updateButtonSubgroup {
+	display:none;
+	color: rgb(255,0,0);
+	background-color: rgb(44,105,157);
+	width: 80px;
+	text-align: center;
+	font-size: 0.6em;
+	margin-left:20px;
+	margin-top: 3px;
+	font-weight: bold;
+	
+}
+
+.newButtonSubgroup {
+	text-decoration: none;
+	display:block;
+	color: rgb(255,255,255);
+	background-color: rgb(255,0,0);
+	text-align: center;
+	font-size: 0.7em;
+	width: 100px;
+	margin-top: 10px;
+	font-weight: bold;
+		
+}
+
+.newButtonSubgroup:hover {
+	text-decoration:none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(30,71,106);
+	text-align: center;
+	font-size: 0.7em;
+	width: 100px;
+	margin-top: 10px;
+	font-weight: bold;
+	border-style: solid;
+	border-color: rgb(255,255,255);
+	border-width:1px;			
+}
+
+.newGroupFormSubgroup{
+	margin-top: 5px;
+	color: rgb(255,0,0);
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.linkNewClientSubgroup {
+	color: rgb(255,255,255);
+	font-size: 0.7em;
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-left:50px;
+	
+}
+
+.linkNewClientSubgroup:hover {
+	text-decoration:none;
+	display: block;
+	color: rgb(255,255,255);
+	background-color: rgb(30,71,106);
+	text-align: center;
+	font-size: 0.7em;
+	font-weight: bold;
+	border-style: solid;
+	border-color: rgb(255,255,255);
+	border-width:1px;
+	margin-left:50px;
+
+}
+
+.listSubgroupClients {
+	color: rgb(255,255,255);
+	font-size: 0.8em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-top:3px;
+	margin-left: 50px;
+	
+}
+
+.listSubgroupClients:hover {
+	color: rgb(255,0,0);
+	font-size: 0.8em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	margin-top:3px;
+	margin-left: 50px;
+	
+}

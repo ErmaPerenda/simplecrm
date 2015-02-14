@@ -1,0 +1,78 @@
+<p id="titleClientsInfo" class="titleMain">Client information</p>
+<table style="margin: 15px;">
+<tr>
+	<th class="titleTableInfo">Name </th>
+	<td class="bodyTableInfo"> <%=client.name%> </td>
+</tr>
+
+<tr>
+	<th class="titleTableInfo">Surname</th>
+	<td class="bodyTableInfo"> <%=client.surname%> </td>
+</tr>
+<tr>
+	<th class="titleTableInfo">Phone</th>
+	<td class="bodyTableInfo"> <%=client.phone%> </td>
+</tr>
+<tr>
+	<th class="titleTableInfo">Email</th>
+	<td class="bodyTableInfo"> <%=client.email%> </td>
+</tr>
+<tr>
+	<th class="titleTableInfo">Company</th>
+	<td class="bodyTableInfo"> <%=client.company%> </td>
+	</tr>
+<tr>
+
+	<th class="titleTableInfo">Job position</th>
+	<td class="bodyTableInfo"> <%=client.job_position%> </td>
+	</tr>
+<tr>
+	<th class="titleTableInfo">Address</th>
+	<td class="bodyTableInfo"> <%=client.address%> </td>
+	</tr>
+<tr>
+	<th class="titleTableInfo">City</th>
+	<td class="bodyTableInfo"> <%=client.city%> </td>
+	</tr>
+<tr>
+	<th class="titleTableInfo">Country</th>
+	<td class="bodyTableInfo"> <%=client.country%> </td>
+</tr>
+
+</table>
+
+<%=link_to "Edit", edit_client_path(client), class: 'buttonClientInfo'%>
+<%=link_to "Delete", client_path(client), method: :delete, 'data-confirm' => "Are you sure to delete client  '#{client.name}' '#{client.surname}'?", class: 'buttonClientInfo' %>
+
+<p id="titleClientsNotes" class="titleClientsNotes">Notes</p>
+<table id="listNotes" style="margin-left: 30px;">
+
+	<%=render 'notesAll', :notes=>client.notes%>
+	
+</table>
+
+<%=link_to "Add note", "#", onclick: "show_form_notes();", class: 'newButtonNotes' , id: "link_new_note"%>
+
+
+        <div id="new_note" style='display:none'>
+        	<p class="titleClientsNotes">New note</p>
+           <%=form_for [client, @note],  remote: true do |f|%>
+
+           <div >
+             <%= f.label :title, class: "newNoteForm" %>
+             <%= f.text_field :title, id: "new_title_value", class: "newNoteForm" %>
+            </div>
+
+            <div >
+             <%= f.label :body, class: "newNoteForm" %>
+             <%= f.text_area :body, id: "new_body_value", class: "newNoteForm" %>
+            </div>
+
+           <div>
+             <%= f.submit  class: 'newButtonNote' %>
+            </div>
+
+          <% end %>
+
+          </div>
+      

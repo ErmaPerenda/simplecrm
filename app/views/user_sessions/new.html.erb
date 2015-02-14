@@ -1,0 +1,38 @@
+
+
+  <div class="container" id="container">
+
+    <div class="header" id="header"></div>
+
+    <div class="left" id="left"></div>
+
+    <div class="main" id="main">
+      <p class="login">Log on Simple CRM</p><br/>
+      <%= form_tag user_session_path do %>
+
+        <p>
+           <%=label_tag :username%>
+           <%= text_field_tag :username%>
+        </p>
+
+        <p>
+          <%=label_tag :password%>
+         <%= password_field_tag :password %>
+        </p>
+
+        <p>
+          <%= submit_tag "Login", class: 'btn btn-primary btn-md'%> 
+        </p>
+
+      <% end %>
+      <p>or <br/>Create an user account <br/>
+      <%=link_to "Registration", new_user_path, class: "login1" %></p>
+      
+    </div>
+      <div class="right" id="right"></div>
+
+  </div>
+
+
+
+

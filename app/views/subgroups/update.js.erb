@@ -1,0 +1,22 @@
+var visibleButton={"display":"block",
+	"color": "rgb(44,105,157)",
+	"background-color": "rgb(255,255,255)",
+	"width": "40px",
+	"text-align": "center",
+	"font-size": "0.6em",
+	"margin-left":"20px",
+	"margin-top": "3px",
+	"font-weight": "bold"};
+	
+var text='<img src="/assets/collapse.jpg" id="imgClientSubgroup<%=@subgroup.id%>"/>';
+$('#submitSubgroup<%= @subgroup.id %>').css('display','none');
+$('#subgroup<%= @subgroup.id %>').css('display','none');
+$('#linkSubgroup<%= @subgroup.id %>').show();
+$('#parentSubgroup<%= @subgroup.id %>').show();
+$('#editSubgroup<%= @subgroup.id %>').css(visibleButton);
+$('#deleteSubgroup<%= @subgroup.id %>').css(visibleButton);
+$('#subgroup<%=@subgroup.id %>').prop('disabled',true);
+$('#linkSubgroup<%= @subgroup.id %>').html(text);
+$('#parentSubgroup<%= @subgroup.id %>').text("<%=@subgroup.name%>");
+
+

@@ -1,0 +1,68 @@
+
+<tr>
+
+  <td>
+    <a href="#" id ="linkSubgroup<%=subgroup.id%>" class="listSubgroup" onclick= "hideChild(this.id)">
+      <img src="/assets/collapse.jpg" id="imgClientSubgroup<%=subgroup.id%>"/></a>
+       <%= link_to subgroup.name, subgroup, id: "parentSubgroup#{subgroup.id}", class: "listSubgroup1", remote:true %>
+     </td>
+  <td>
+    <%= link_to "Edit",  "#", onclick: "show_form_edit_group(\"subgroup#{subgroup.id}\" );", class: 'visibleButtonSubgroup', id: "editSubgroup#{subgroup.id}" %>
+  </td>
+
+  <td>
+    <%= button_to "Delete", subgroup_path(subgroup),
+        method: :delete, id: "deleteSubgroup#{subgroup.id}",
+        class: 'visibleButtonSubgroup',
+        'data-confirm' => "Are you sure to delete this subgroup?" %> 
+    </td>
+
+</tr>
+  
+<tr>
+
+  <%=form_for subgroup, remote:true do |f| %>
+    <td>
+      <%=f.text_field :name, id: "subgroup#{subgroup.id}", value: subgroup.name, disabled: "disabled", style: "display:none;"%>
+    </td>
+        
+    <td>
+      <%= f.submit class: 'updateButtonSubgroup', :id=>"submitSubgroup#{subgroup.id}"%>
+    </td>
+  <% end %>
+
+</tr>
+
+<tr><td>
+  <!--child clients-->
+  <table id="clientsSubgroup<%=subgroup.id%>" class='groups_child'>
+   
+   
+  <%subgroup.clients.each do |client| %>
+    <tr>
+      <td>
+        <%= link_to "#{client.name} #{client.surname} - #{client.company}", client, id: "linkClient#{client.id}", class: "listSubgroupClients", remote:true %> 
+      </td> 
+    </tr>
+  <% end %>
+
+  </table>
+</td></tr>
+  <!-- form for create new client direct for group -->
+<tr><td>
+  <table  id="new_subgroup_client_table">
+    <tr>
+      <td>
+        <%= link_to "New client in subgroup", new_subgroup_client_path(subgroup), class: "linkNewClientSubgroup"%>
+        
+      </td>
+    </tr>
+  </table>
+
+    
+  </td>
+</tr>
+
+
+
+ 

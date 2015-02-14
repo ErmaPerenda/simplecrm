@@ -1,0 +1,14 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'user_sessions';
+@import 'users';
+@import 'groups';
+@import 'subgroups';
+@import 'clients';
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: rgb(102,102,102);
+}

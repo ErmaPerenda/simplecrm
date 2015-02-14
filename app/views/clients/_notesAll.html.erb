@@ -1,0 +1,9 @@
+<tr>
+	<td class="titleNotes">Title</td>
+	<td class="titleNotes">Description</td>
+	<td class="titleNotes">Created at</td>
+	</tr>
+
+<%notes.each do |note| %>
+<%=render 'note', :note=>note%>
+<%end%>

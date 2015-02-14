@@ -1,0 +1,4 @@
+
+$('#subgroup1_<%=@subgroup.group_id%>').append("<%= escape_javascript(render @subgroup) %>");
+$('#form_new_subgroup<%=@subgroup.group_id%>').css('display','none');
+$('#new_subgroup_value<%=@subgroup.group_id%>').val('');

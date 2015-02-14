@@ -1,0 +1,6 @@
+$('#listNotes').append("<%= escape_javascript(render '/clients/note', :note=> @note) %>");
+
+$('#new_body_value').val('');
+$('#new_title_value').val('');
+$("#new_note").hide();
+$("#link_new_note").show();

@@ -1,0 +1,83 @@
+<%= form_for [@group || @subgroup, @client] do |f| %>
+  <% if @client.errors.any? %>
+    <h3><%= t('validation_errors', count: @client.errors.count) %></h3>
+
+    <ul>
+      <% @client.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <table>
+    <tr>
+      <td class='tableNewClient'><%= f.label :name %>*</td>
+      <td class='tableNewClient'><%= f.text_field :name %></td>
+  </tr>
+
+  <tr>
+    <td class='tableNewClient'><%= f.label :surname %>*</td>
+    <td class='tableNewClient'><%= f.text_field :surname %></td>
+  </tr>
+
+  <tr>
+    <td class='tableNewClient'><%= f.label :address %></td>
+    <td class='tableNewClient'><%= f.text_field :address %></td>
+  </tr>
+
+   <tr>
+    <td class='tableNewClient'><%= f.label :city %>*</td>
+    <td class='tableNewClient'><%= f.text_field :city %></td>
+  </tr>
+  <tr>
+    <td class='tableNewClient'><%= f.label :country %>*</td>
+    <td>
+      <%require 'uri' %>
+      <%require 'net/http'%>
+      <%require 'nokogiri'%>
+      <%search_url="http://www.listofcountriesoftheworld.com/" %>
+      <%search_uri=URI(search_url)%>
+      <%body=Net::HTTP.get(search_uri)%>
+
+      <%doc=Nokogiri::HTML.parse(body)%>
+      <%state=doc.xpath('//div[@id="ctry"]/a')%>
+      <%=f.select (:country) do %> 
+      <%state.each do |i| %>
+      <%=content_tag(:option, i.text, value: i.text) %>
+      <%end %>
+    <%end %>
+     
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='tableNewClient'><%= f.label :phone %>*</td>
+    <td class='tableNewClient'><%= f.text_field :phone %></td>
+  </tr>
+
+  <tr>
+    <td class='tableNewClient'><%= f.label :fax %></td>
+    <td class='tableNewClient'><%= f.text_field :fax %></td>
+  </tr>
+<tr>
+
+  <tr>
+    <td class='tableNewClient'><%= f.label :email %></td>
+    <td class='tableNewClient'><%= f.text_field :email %></td>
+  </tr>
+<tr>
+    <td class='tableNewClient'><%= f.label :job_position %></td>
+    <td class='tableNewClient'><%= f.text_field :job_position %></td>
+  </tr>
+
+  <tr>
+    <td class='tableNewClient'><%= f.label :company %></td>
+    <td class='tableNewClient'><%= f.text_field :company %></td>
+  </tr>
+</table>
+  
+  
+    <%= f.submit %>
+  
+<% end %>

@@ -1,0 +1,14 @@
+<tr id="<%=note.id%>">
+	<td class="bodyNotes">
+		<%=note.title%>
+	</td>
+	<td class="bodyNotes">
+		<%=note.body%>
+	</td>
+	<td class="bodyNotes">
+		<%=note.created_at%>
+	</td>
+	<td class="bodyNotes">
+		<%=link_to "Delete", note_path(note) , method: :delete, 'data-confirm' => "Are you sure to delete note '#{note.title}'?", remote:true, class: "deleteNotes" %>
+	</td>
+</tr>

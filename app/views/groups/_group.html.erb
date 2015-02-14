@@ -1,0 +1,145 @@
+ 
+    <tr>
+      <td>
+
+        <table>
+
+          <tr style="border-bottom-color: rgb(255,0,0); 
+                     border-bottom-style: solid;
+                      border-bottom-width: 2px;
+                       margin-top: 10px;
+                       margin-bottom:5px;">
+            <td>
+              <a href="#" id="parent<%=group.id%>" onclick="hideChild(this.id);">
+                <img src="/assets/collapse.jpg" id="img<%=group.id%>"/>
+              </a>
+        <%= link_to group.name, group, id: "link#{group.id}", class: "listGroup", remote:true %> 
+      </td>
+
+      <td>
+        <%= link_to "Edit",  "#", onclick: "show_form_edit_group(#{group.id});", class: 'visibleButton', id: "edit#{group.id}" %>
+      </td>
+
+      <td>
+        <%= button_to "Delete", group_path(group),
+        method: :delete, id: "delete#{group.id}",
+        class: 'visibleButton',
+        'data-confirm' => "Are you sure to delete this group?" %> 
+      </td>
+    </tr>
+  
+    <tr>
+      <%=form_for group, remote:true do |f| %>
+        <td>
+          <%=f.text_field :name, id: group.id, value: group.name, disabled: "disabled", style: "display:none;"%>
+        </td>
+        <td>
+         <%= f.submit class: 'updateButton', :id=>"submit#{group.id}"%>
+        </td>
+     <% end %>
+   </tr>
+</table>
+</td>
+</tr>
+   <tr><td>
+   
+      <!-- List subgroups-->
+  
+  <table id="subgroup<%=group.id%>" class="groups_child">
+
+   <tr>
+    <td>
+      <a href="#" id="parentSubgroup<%=group.id%>" onclick="hideChild(this.id);" class="listSubgroupParent">
+      <img src="/assets/collapse.jpg" id="imgSubgroup<%=group.id%>"/>
+      Subgroups</a>
+    </td>
+  </tr>
+
+  <tr><td><table id="subgroup1_<%=group.id%>" class="groups_child">
+   
+  <%group.subgroups.each do |subgroup| %>
+  
+   <%=render subgroup %>
+ 
+  <% end %>
+
+  </table></td></tr>
+
+
+<tr><td>
+  <a href="#" id="parentClient<%=group.id%>" onclick="hideChild(this.id);" class="listSubgroupParent">
+      <img src="/assets/collapse.jpg" id="imgClient<%=group.id%>"/>
+      Clients</a>
+    </td>
+  </tr>
+  <tr><td>
+  <!--child clients-->
+  <table id="clients<%=group.id%>" class='groups_child'>
+   
+   
+  <%group.clients.each do |client| %>
+    <tr>
+      <td>
+        <%= link_to "#{client.name} #{client.surname} - #{client.company}", client, id: "linkClient#{client.id}", class: "listSubgroup", remote:true %> 
+      </td> 
+    </tr>
+  <% end %>
+
+  </table>
+</td></tr>
+</table></td></tr>
+
+<tr><td>
+
+    <!--form for create a new subgroup -->
+  <table  id="new_subgroup_table">
+    <tr style="border-bottom-color: rgb(255,255,255); 
+                     border-bottom-style: solid;
+                      border-bottom-width: 2px;
+                       margin-top: 10px;
+                       margin-bottom:10px;
+                       text-align:right;">
+      <td>
+        <%= link_to "New subgroup", "#", onclick: "show_form_group('#{group.id}');", class: 'newButtonSubgroup' %>
+        <!--Add new group -->
+        <div id="form_new_subgroup<%=group.id%>" style='display:none'>
+
+           <%=form_for [group, @subgroup],  remote: true do |f|%>
+
+           <div >
+             <%= f.label :name, class: "newGroupFormSubgroup" %>
+             <%= f.text_field :name, id: "new_subgroup_value#{group.id}", class: "newGroupFormSubgroup" %>
+            </div>
+
+           <div>
+             <%= f.submit class: 'newButtonSubgroup' %>
+            </div>
+
+          <% end %>
+
+          </div>
+      </td>
+    </tr>
+  </table>
+</td></tr>
+  <!-- form for create new client direct for group -->
+<tr><td>
+  <table  id="new_group_client_table">
+    <tr style="border-bottom-color: rgb(255,255,255); 
+                     border-bottom-style: solid;
+                      border-bottom-width: 2px;
+                       margin-top: 10px;
+                       margin-bottom:10px;
+                       text-align:right;">
+      <td>
+        <%= link_to "New client in group", new_group_client_path(group), class: "linkNewClient"%>
+        
+      </td>
+    </tr>
+  </table>
+
+    
+  </td>
+</tr>
+ 
+
